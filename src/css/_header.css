@@ -1,0 +1,19 @@
+.header_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header_link.active {
+  color: #feae28;
+}
+.header_link.active::after {
+  content: "";
+  font-weight: bold;
+  width: 5px;
+  height: 5px;
+  display: block;
+  background-color: #feae28;
+  border-radius: 100vmax;
+  position: relative;
+  top: 5px;
+}
