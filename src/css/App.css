@@ -1,3 +1,31 @@
+.dash-after::after {
+  content: "";
+  width: 60px;
+  height: 5px;
+  background-color: #feae28;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.dash-animate::after {
+  animation-name: dash;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
+@keyframes dash {
+  0% {
+    width: 2px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+.text-muted {
+  opacity: 0.6;
+}
+
 .header_link {
   display: flex;
   flex-direction: column;
@@ -46,4 +74,5 @@
 .Sub-Header-Section {
   background-color: #333445;
   height: 400px;
+  padding-top: 3rem;
 }

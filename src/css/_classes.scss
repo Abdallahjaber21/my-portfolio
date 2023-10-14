@@ -1,0 +1,51 @@
+@import "./colors";
+
+.dash-after {
+    &::after {
+        content: '';
+        width: 60px;
+        height: 5px;
+        background-color: $color_yellow;
+        display: block;
+        margin-top: .5rem;
+    }
+    
+}
+
+.dash-animate
+{
+    &::after {
+        animation-name: dash;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-duration: 1s;
+    }
+
+}
+
+@keyframes dash {
+    0% {
+        width: 2px;
+    }
+
+    100%{
+        width: 60px;
+    }
+}
+
+.text-muted
+{
+    opacity: .6;
+}
+
+// .linkedln_svg_icon {
+//     .social-svg-mask {
+//         transition: all 200ms !important;
+//     }
+
+//     &:hover {
+//         .social-svg-mask {
+//             fill: rgb(0, 127, 177) !important;
+//         }
+//     }
+// }
