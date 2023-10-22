@@ -1,9 +1,61 @@
 
 @import './colors';
 
+
+.Home_page_layout
+{
+    padding-top: 5rem;
+    .content
+    {
+       .left_static_section
+       {
+        width: 40%;
+        min-height: 100vh;
+        .content{
+            position: sticky;
+            top: 10px;
+
+            .links_list
+            {
+                display: flex;
+                flex-direction: column;
+                
+                .section_link
+                {
+                    font-size: 15px;
+                    display: flex;
+                    align-items: center;
+                    &.active{
+                        &::before
+                        {
+                            content: "";
+                            width: 40px;
+                            height: 1px;
+                            background-color: white;
+                            margin-right: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+       }
+
+       .right_scrollable_section
+       {
+        width: 60%;
+       }
+    }
+   
+}
+
 .Sub-Header-Section
 {
     background-color: $color_primary;
     height: 400px;
     padding-top: 3rem;
+    // background-image: url("../images/profile_pic_no_bg.png");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 35%;
+    background-attachment: fixed;
 }
