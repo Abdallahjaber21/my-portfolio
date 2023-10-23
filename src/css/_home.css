@@ -17,13 +17,18 @@
   font-size: 15px;
   display: flex;
   align-items: center;
+  transition: all 200ms;
 }
-.Home_page_layout .content .left_static_section .content .links_list .section_link.active::before {
+.Home_page_layout .content .left_static_section .content .links_list .section_link::before {
   content: "";
-  width: 40px;
+  width: 0px;
   height: 1px;
   background-color: white;
   margin-right: 0.5rem;
+  transition: width 200ms;
+}
+.Home_page_layout .content .left_static_section .content .links_list .section_link.active::before, .Home_page_layout .content .left_static_section .content .links_list .section_link:hover::before {
+  width: 40px;
 }
 .Home_page_layout .content .right_scrollable_section {
   width: 60%;

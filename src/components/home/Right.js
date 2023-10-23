@@ -1,10 +1,11 @@
 import React from "react";
+import ExperienceCard from "../cards/ExperienceCard";
 
 const Right = () => {
   return (
     <div className="right_scrollable_section">
       <section id="about">
-        <text className="text-muted text-sm mb-10 h-128">- Introduction</text>
+        {/* <text className="text-muted text-sm mb-10 h-128">- Introduction</text> */}
         <br />
         <div>
           <text>Mid-Senior</text>
@@ -24,7 +25,7 @@ const Right = () => {
         </div>
       </section>
       <section id="experience" className="h-128">
-            My experience
+            <ExperienceCard from="2018" to="present" title="Lead Engineer" position="Senior Engineer Eng" position_details="Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship." position_skills="yii2,framwork7,reactjs"/>
       </section>
       <section id="projects">
             My Projects
