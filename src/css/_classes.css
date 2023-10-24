@@ -25,3 +25,12 @@
 .text-muted {
   opacity: 0.6;
 }
+
+.text-capital {
+  text-transform: uppercase !important;
+}
+
+.experience_card .skill_tag {
+  color: #2dd4bf;
+  background-color: #122b39;
+}

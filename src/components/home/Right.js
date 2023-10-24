@@ -7,13 +7,13 @@ const Right = () => {
       <section id="about">
         {/* <text className="text-muted text-sm mb-10 h-128">- Introduction</text> */}
         <br />
-        <div>
-          <text>Mid-Senior</text>
+        <div className="text-lg">
+          <span>Mid-Senior</span>
           <br />
-          <text>Full-Stack Developer</text>
+          <span>Full-Stack Developer</span>
         </div>
 
-        <div className="summary text-sm text-muted mt-2">
+        <div className="summary text-lg text-muted mt-2">
           Experienced Full-Stack Developer with a strong background in
           designing, developing, and maintaining web applications using a
           diverse range of programming languages and frameworks. Proficient in
@@ -24,7 +24,9 @@ const Right = () => {
           the ever-evolving tech landscape.
         </div>
       </section>
-      <section id="experience" className="h-128">
+      <section id="experience" className="h-128 mt-20">
+            <ExperienceCard from="2018" to="present" title="Lead Engineer" position="Senior Engineer Eng" position_details="Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship." position_skills="yii2,framwork7,reactjs"/>
+            <ExperienceCard from="2018" to="present" title="Lead Engineer" position="Senior Engineer Eng" position_details="Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship." position_skills="yii2,framwork7,reactjs"/>
             <ExperienceCard from="2018" to="present" title="Lead Engineer" position="Senior Engineer Eng" position_details="Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship." position_skills="yii2,framwork7,reactjs"/>
       </section>
       <section id="projects">

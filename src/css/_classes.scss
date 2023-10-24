@@ -38,6 +38,11 @@
     opacity: .6;
 }
 
+.text-capital
+{
+    text-transform: uppercase !important;
+}
+
 // .linkedln_svg_icon {
 //     .social-svg-mask {
 //         transition: all 200ms !important;
@@ -50,8 +55,11 @@
 //     }
 // }
 
-// .experience_card
-// {
-//     display: flex;
-//     align-items: flex-start;
-// }
+.experience_card
+{
+   .skill_tag
+   {
+    color: $color_teal;
+    background-color: $color_tags_bg;
+   }
+}
