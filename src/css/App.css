@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 .dash-after::after {
   content: "";
   width: 60px;
@@ -34,6 +35,31 @@
   color: #2dd4bf;
   background-color: #122b39;
 }
+.experience_card .title {
+  transition: all 200ms;
+}
+.experience_card .title::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 200ms;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white' class='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+}
+.experience_card:hover {
+  box-shadow: 0px 0px 5px #1b273d;
+  background-color: #162032;
+  cursor: pointer;
+}
+.experience_card:hover .title {
+  color: #2dd4bf;
+}
+.experience_card:hover .title::after {
+  transform: translateX(2px) translateY(-5px);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232dd4bf' class='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+}
 
 .header_link {
   display: flex;
@@ -57,9 +83,13 @@
 
 html {
   scroll-behavior: smooth !important;
+  background-color: #0f172a;
 }
 html *::selection {
   background: #2dd4bf;
+}
+html body {
+  font-family: "Lato", sans-serif;
 }
 
 .App {
@@ -124,7 +154,7 @@ html *::selection {
 }
 
 .Sub-Header-Section {
-  background-color: #333445;
+  background-color: #0f172a;
   height: 400px;
   padding-top: 3rem;
   background-repeat: no-repeat;

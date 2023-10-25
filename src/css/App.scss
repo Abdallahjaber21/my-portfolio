@@ -3,16 +3,23 @@
 @import './header';
 
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html{
   scroll-behavior: smooth !important;
-  
+  background-color: $color_primary;
   *
   {
     &::selection
     {
       background: $color_teal;
+      
     }
   }
+
+  body{
+    font-family: 'Lato', sans-serif;
+    }
  
 }
 .App {
