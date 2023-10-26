@@ -55,7 +55,7 @@
 //     }
 // }
 
-.experience_card
+.experience_card,.project_card
 {
     transition: all 200ms;
    .skill_tag
@@ -68,8 +68,8 @@
     transition: all 200ms;
     &::after{
         content: '';
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         display: block;
         background-size: cover;
         background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 import React from "react";
 import ExperienceCard from "../cards/ExperienceCard";
 import CV from '../../assets/my_cv.pdf';
+import ProjectCard from "../cards/ProjectCard";
 
 const Right = () => {
   return (
@@ -33,8 +34,11 @@ const Right = () => {
       <section id="resume" className="mt-20">
          <a href={CV} className="font-semibold flex gap-2 items-center">View Full Resume</a>
       </section>
-      <section id="projects">
-            My Projects
+      <section id="projects" className="mt-20">
+           <ProjectCard title="Spotify Profile" project_img="https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=256&q=75" project_details="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more." />
+           <ProjectCard title="Spotify Profile" project_img="https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=256&q=75" project_details="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more." project_skills="framework7,cordova,yii2,php,mysql" />
+           <ProjectCard title="Spotify Profile" project_img="https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=256&q=75" project_details="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more." project_skills="framework7,cordova,yii2,php,mysql" />
+           <ProjectCard title="Spotify Profile" project_img="https://brittanychiang.com/_next/image?url=%2Fimages%2Fprojects%2Fhalcyon.png&w=256&q=75" project_details="Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more." project_skills="framework7,cordova,yii2,php,mysql" />
       </section>
     </div>
   );

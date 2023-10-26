@@ -4,8 +4,6 @@ const ExperienceCard = (props) => {
 
     let skills = props?.position_skills?.split(",");
 
-    console.warn('<<< skills >>>' , skills);
-
     return (
         <div className='experience_card flex w-144 mb-10 p-2'>
             <div className='from_to flex-1 w-10 text-sm text-muted text-capital font-semibold'>{props?.from} - {props?.to}</div>

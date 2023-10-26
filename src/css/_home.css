@@ -6,8 +6,7 @@
   min-height: 100vh;
 }
 .Home_page_layout .content .left_static_section .content {
-  position: sticky;
-  top: 10px;
+  position: fixed;
 }
 .Home_page_layout .content .left_static_section .content .links_list {
   display: flex;

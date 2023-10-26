@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 const Left = () => {
   return (
     <div className="left_static_section">
-      <div className="content">
+      <div className="content flex flex-col justify-between" style={{height:'80vh'}}>
         <div className="author-name text-5xl dash-after dash-animate">
           Abdullah
           <br />
