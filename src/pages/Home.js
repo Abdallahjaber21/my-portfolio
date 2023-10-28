@@ -7,7 +7,7 @@ import Right from '../components/home/Right';
 const Home = () => {
     return (
          <div className="Home_page_layout text-white  pb-32">
-            <div className='content max-w-7xl mx-auto flex justify-between p-4'>
+            <div className='content max-w-7xl xl:max-w-5xl lg:max-w-4xl mx-auto flex justify-between p-4'>
                 <Left />
                 <Right />
             </div>

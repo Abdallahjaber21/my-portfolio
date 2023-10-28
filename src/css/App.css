@@ -143,8 +143,8 @@ html j body {
 .Home_page_layout .content .left_static_section .content .links_list .section_link::before {
   content: "";
   width: 0px;
-  height: 1px;
-  background-color: white;
+  height: 2px;
+  background-color: #feae28;
   margin-right: 0.5rem;
   transition: width 200ms;
 }

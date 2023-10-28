@@ -28,8 +28,8 @@
                         &::before {
                             content: "";
                             width: 0px;
-                            height: 1px;
-                            background-color: white;
+                            height: 2px;
+                            background-color: #feae28;
                             margin-right: .5rem;
                             transition: width 200ms;
                         }
@@ -93,14 +93,21 @@
 
 }
 
-// .Sub-Header-Section
-// {
-//     background-color: $color_primary;
-//     height: 400px;
-//     padding-top: 3rem;
-//     // background-image: url("../images/profile_pic_no_bg.png");
-//     background-repeat: no-repeat;
-//     background-position-y: top;
-//     background-position-x: 35%;
-//     background-attachment: fixed;
+// @media only screen and(max-width:1200px){
+//     .Home_page_layout
+//     {
+//         .content
+//         {
+//             .right_scrollable_section
+//             {
+//                 #about
+//                 {
+//                     .summary
+//                     {
+//                         font-size: 1rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 // }

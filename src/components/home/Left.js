@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
 const Left = () => {
+
+  function checkActiveSection(event) {
+    let links = document.getElementsByClassName('section_link');
+  
+    for (let index = 0; index < links.length; index++) {
+      links[index].classList.remove('active');
+    }
+  
+    event.target.classList.add('active');
+  }
+
   return (
     <div className="left_static_section">
       <div className="content flex flex-col justify-between" style={{height:'80vh'}}>
-        <div className="author-name text-5xl dash-after dash-animate">
+        <div className="author-name text-5xl xl:text-3xl dash-after dash-animate">
           Abdullah
           <br />
           Jaber Mohamad
         </div>
         <div className="links_list mt-10">
-            <a href="#about" className="section_link active mb-2 text-sm font-semibold rounded-full  transition duration-200 all">ABOUT</a>
-            <a href="#experience" className="section_link mb-2 text-sm font-semibold rounded-full  transition duration-200 all">EXPERIENCE</a>
-            <a href="#projects" className="section_link text-sm font-semibold rounded-full  transition duration-200 all">PROJECTS</a>
+            <a href="#about" id="about-link" className="section_link mb-2 text-sm font-semibold rounded-full  transition duration-200 all active" onClick={(e) => checkActiveSection(e)}>ABOUT</a>
+            <a href="#experience" id="experience-link" className="section_link mb-2 text-sm font-semibold rounded-full  transition duration-200 all" onClick={(e) => checkActiveSection(e)}>EXPERIENCE</a>
+            <a href="#projects" id="projects-link" className="section_link text-sm font-semibold rounded-full  transition duration-200 all" onClick={(e) => checkActiveSection(e)}>PROJECTS</a>
         </div>
 
         <div className="author-social-medias mt-20">
