@@ -5,9 +5,9 @@ const ProjectCard = (props) => {
   let skills = props?.project_skills?.split(",");
 
     return (
-        <div className='project_card flex w-144 mb-10 p-2'>
-        <div className='project_thumb_image flex-1 w-10'>
-          <img srcSet={props?.project_img} className="h-20 object-cover rounded-sm"/>
+        <div className='project_card flex 2xl:w-full xl:w-144 mb-10 p-2 gap-x-10'>
+        <div className='project_thumb_image flex-1 2xl:w-14 xl:w-10 flex justify-center items-start'>
+          <img src={props?.project_img} style={{background: props?.image_bg , padding: '5px'}} className="object-cover rounded-sm max-h-36"/>
         </div>
         <div className='details flex-auto w-64'>
           <div className='title text-md font-bold flex items-end gap-1'>

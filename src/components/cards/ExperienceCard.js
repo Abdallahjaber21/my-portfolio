@@ -7,7 +7,7 @@ const ExperienceCard = (props) => {
     let details = props?.position_details?.split(". ");
 
     return (
-        <div className='experience_card flex w-144 mb-10 p-2'>
+        <div className='experience_card flex 2xl:w-full xl:w-144 mb-10 p-2'>
             <div className='from_to flex-1 w-10 text-xs text-muted text-capital font-semibold'>{props?.from} - {props?.to}</div>
             <div className='details flex-auto w-64'>
               <div className='title text-md font-bold flex items-end gap-1'>
