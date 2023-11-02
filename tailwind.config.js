@@ -14,6 +14,7 @@ module.exports = {
 
       'lg': {'max': '1075px'},
       // => @media (max-width: 1023px) { ... }
+      'lg-break': {'max': '960px'},
 
       'md': {'max': '993px'},
       // => @media (max-width: 767px) { ... }
