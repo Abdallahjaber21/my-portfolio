@@ -77,7 +77,7 @@ const Left = () => {
       <div className="left_static_section mobile_v hidden lg-break:block sticky top-0 bg-primary z-10">
         <nav class="navbar">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0 pt-4 pb-4">
-            <div className="author-name text-5xl xl:text-3xl lg-break:text-3xl dash-after dash-animate">
+            <div className="author-name text-5xl xl:text-3xl lg-break:text-3xl xs:text-xl dash-after dash-animate">
               Abdullah Jaber
             </div>
             <button

@@ -24,7 +24,7 @@ const Right = () => {
           <span>Full-Stack Developer</span>
         </div>
 
-        <div className="summary text-lg xl:text-base text-muted mt-2 ">
+        <div className="summary text-lg xl:text-base xs:text-xs text-muted mt-2 ">
           Experienced Full-Stack Developer with a strong background in
           designing, developing, and maintaining web applications using a
           diverse range of programming languages and frameworks. Proficient in
