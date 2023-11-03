@@ -6,9 +6,9 @@ import ProjectCard from "../cards/ProjectCard";
 // IMAGES
 import almawi_img from "../../images/projects/almawi/almawi.png";
 import zmerly_img from "../../images/projects/zmerly/zmerly.png";
-import zakey_customer_logo from "../../images/projects/zakey/customer/logo.png";
-import pepsi_lebanon_logo from "../../images/projects/pepsi_lebanon/logo.png";
-import keep_property_logo from "../../images/projects/keep_property/logo.png";
+import zakey_customer_logo from "../../images/projects/zakey/customer/logo.webp";
+import pepsi_lebanon_logo from "../../images/projects/pepsi_lebanon/logo.webp";
+import keep_property_logo from "../../images/projects/keep_property/logo.webp";
 import ole_logo from "../../images/projects/ole_nutrients/ole_full.png";
 import tree_treat_logo from "../../images/projects/tree-treat/logo.webp";
 
@@ -35,7 +35,70 @@ const Right = () => {
           the ever-evolving tech landscape.
         </div>
       </section>
-      <section id="experience" className="mt-20">
+      <section id="projects" className="mt-20 xs:mt-10">
+        <div className="font-bold mb-5 pt-2 text-2xl">Projects</div>
+        <ProjectCard
+          title="Almawi Home Appliances"
+          project_img={almawi_img}
+          image_bg="rgb(59 118 178)"
+          project_url="https://almawihome.com/beta"
+          project_details="Our online portal is a one-stop service solution for all of your appliances, it diagnoses and estimates the repair service fee and the cost upfront. Our goal is to inform the consumers about the possibility of repairing the purchased product and to contribute to greater environmental awareness and sustainable practices."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+        <ProjectCard
+          title="Zmerly Shop"
+          project_img={zmerly_img}
+          image_bg="#f7793c"
+          project_details="ZMERLY & CO owes the success largely to our exceptional proximity to our customers when it comes to research and development, engineering, design, quality assurance, production and marketing.  Our development strategy is based on over 28 years of experience, promotion of innovations and a constant search for newer and better solutions. "
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+        <ProjectCard
+          title="Ole Nutrients"
+          project_img={ole_logo}
+          image_bg="white"
+          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+        <ProjectCard
+          title="Keep Property"
+          project_img={keep_property_logo}
+          project_url="http://www.keep-property.com/"
+          image_bg="white"
+          project_details="Keep Property is a leading property management company. Our aim is to KEEP select real estates in prime condition by executing effective property management procedures and providing excellent quality workmanship.
+             A superior commercial or residential building must be kept highly presentabe if it’s to maintain a first-rate image. This helps to retain a property’s value, ensures its safety, and the well being of its occupants."
+          project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
+          project_screenshot='keep_property/login.webp,keep_property/home.webp,keep_property/dues.webp'
+        />
+        <ProjectCard
+          title="Pepsi Lebanon"
+          project_img={pepsi_lebanon_logo}
+          image_bg="#092847"
+          project_url="https://pepsilebanon.com/"
+          project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
+          project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
+          project_screenshot='pepsi_lebanon/home.webp,pepsi_lebanon/categories.webp,pepsi_lebanon/subcategories.webp'
+        />
+         <ProjectCard
+          title="Zakey Customer"
+          image_bg="#009f00"
+          project_img={zakey_customer_logo}
+          project_url="https://zakey.app/"
+          project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
+          project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
+          project_screenshot='zakey/home.webp,zakey/categories.webp,zakey/single.webp'
+        />
+          <ProjectCard
+          title="Tree Treat"
+          project_img={tree_treat_logo}
+          image_bg="white"
+          // project_url=""
+          project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
+          project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
+          project_screenshot='tree-treat/login.webp,tree-treat/home.webp,tree-treat/single.webp'
+        />
+      </section>
+      <section id="experience" className="mt-20 xs:mt-10">
+      <div className="font-bold mb-5 pt-2 text-2xl">Experience</div>
         <ExperienceCard
           from="Feb 2022"
           to="present"
@@ -62,66 +125,12 @@ const Right = () => {
           position_skills="odoo,management"
         />
       </section>
-      <section id="resume" className="mt-20">
+      <section id="resume" className="mt-20 xs:mt-10">
         <a href={CV} className="font-semibold flex gap-2 items-center">
           View Full Resume
         </a>
       </section>
-      <section id="projects" className="mt-20">
-        <ProjectCard
-          title="Almawi Home Appliances"
-          project_img={almawi_img}
-          image_bg="rgb(59 118 178)"
-          project_details="Our online portal is a one-stop service solution for all of your appliances, it diagnoses and estimates the repair service fee and the cost upfront. Our goal is to inform the consumers about the possibility of repairing the purchased product and to contribute to greater environmental awareness and sustainable practices."
-          project_skills="magento2,php,mysql,e-commerce"
-        />
-        <ProjectCard
-          title="Zmerly Shop"
-          project_img={zmerly_img}
-          image_bg="#f7793c"
-          project_details="ZMERLY & CO owes the success largely to our exceptional proximity to our customers when it comes to research and development, engineering, design, quality assurance, production and marketing.  Our development strategy is based on over 28 years of experience, promotion of innovations and a constant search for newer and better solutions. "
-          project_skills="magento2,php,mysql,e-commerce"
-        />
-        <ProjectCard
-          title="Ole Nutrients"
-          project_img={ole_logo}
-          image_bg="white"
-          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
-          project_skills="magento2,php,mysql,e-commerce"
-        />
-        <ProjectCard
-          title="Keep Property"
-          project_img={keep_property_logo}
-          project_url="http://www.keep-property.com/"
-          image_bg="white"
-          project_details="Keep Property is a leading property management company. Our aim is to KEEP select real estates in prime condition by executing effective property management procedures and providing excellent quality workmanship.
-             A superior commercial or residential building must be kept highly presentabe if it’s to maintain a first-rate image. This helps to retain a property’s value, ensures its safety, and the well being of its occupants."
-          project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-        />
-        <ProjectCard
-          title="Pepsi Lebanon"
-          project_img={pepsi_lebanon_logo}
-          image_bg="white"
-          project_url="https://pepsilebanon.com/"
-          project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
-          project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
-        />
-         <ProjectCard
-          title="Zakey Customer"
-          project_img={zakey_customer_logo}
-          project_url="https://zakey.app/"
-          project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
-          project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-        />
-          <ProjectCard
-          title="Tree Treat"
-          project_img={tree_treat_logo}
-          image_bg="white"
-          project_url="https://pepsilebanon.com/"
-          project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
-          project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
-        />
-      </section>
+     
     </div>
   );
 };

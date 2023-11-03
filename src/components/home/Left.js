@@ -34,20 +34,20 @@ const Left = () => {
               ABOUT
             </a>
             <a
-              href="#experience"
-              id="experience-link"
+              href="#projects"
+              id="projects-link"
               className="section_link mb-2 text-sm font-semibold rounded-full  transition duration-200 all"
               onClick={(e) => checkActiveSection(e)}
             >
-              EXPERIENCE
+              PROJECTS
             </a>
             <a
-              href="#projects"
-              id="projects-link"
-              className="section_link text-sm font-semibold rounded-full  transition duration-200 all"
+              href="#experience"
+              id="experience-link"
+              className="section_link  text-sm font-semibold rounded-full  transition duration-200 all"
               onClick={(e) => checkActiveSection(e)}
             >
-              PROJECTS
+              EXPERIENCE
             </a>
           </div>
 
@@ -75,12 +75,12 @@ const Left = () => {
         </div>
       </div>
       <div className="left_static_section mobile_v hidden lg-break:block sticky top-0 bg-primary z-10">
-        <nav class="navbar">
-          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0 pt-4 pb-4">
+        <nav className="navbar">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-0 pt-4 pb-4">
             <div className="author-name text-5xl xl:text-3xl lg-break:text-3xl xs:text-xl lg:dash-after dash-animate">
               Abdullah Jaber
             </div>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <div className="hidden w-full md:block md:w-auto" id="navbar-default">
               <div className="links_list flex gap-3">
                 <a
                   href="#about"
@@ -91,20 +91,20 @@ const Left = () => {
                   ABOUT
                 </a>
                 <a
-                  href="#experience"
-                  id="experience-link"
-                  className="section_link text-sm font-semibold rounded-full  transition duration-200 all xs:text-xs"
-                  onClick={(e) => checkActiveSection(e)}
-                >
-                  EXPERIENCE
-                </a>
-                <a
                   href="#projects"
                   id="projects-link"
                   className="section_link text-sm font-semibold rounded-full  transition duration-200 all xs:text-xs"
                   onClick={(e) => checkActiveSection(e)}
                 >
                   PROJECTS
+                </a>
+                <a
+                  href="#experience"
+                  id="experience-link"
+                  className="section_link text-sm font-semibold rounded-full  transition duration-200 all xs:text-xs"
+                  onClick={(e) => checkActiveSection(e)}
+                >
+                  EXPERIENCE
                 </a>
               </div>
             </div>
