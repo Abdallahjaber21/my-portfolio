@@ -5,11 +5,11 @@ const ProjectCard = (props) => {
   let skills = props?.project_skills?.split(",");
 
     return (
-        <div className='project_card flex 2xl:w-full xl:w-144 mb-10 p-2 gap-x-10 lg-break:w-full lg-break:p-0'>
-        <div className='project_thumb_image flex-1 2xl:w-14 xl:w-10 flex justify-center lg-break:justify-start items-start'>
-          <img src={props?.project_img} style={{background: props?.image_bg , padding: '5px' , width:'220px' }} className="object-contain rounded-sm max-h-36"/>
+        <div className='project_card flex 2xl:w-full xl:w-144 mb-10 p-2 gap-x-10 lg-break:w-full lg-break:p-0 xs:flex-col'>
+        <div className='project_thumb_image flex-1 2xl:w-14 xl:w-10 flex justify-center lg-break:justify-start items-start xs:w-full xs:justify-start'>
+          <img src={props?.project_img} style={{background: props?.image_bg , padding: '5px'}} className="w-56 object-contain rounded-sm max-h-36 xs:w-56 object-left xs:h-fit"/>
         </div>
-        <div className='details flex-auto w-64'>
+        <div className='details flex-auto w-64 xs:w-full xs:mt-2'>
           <div className='title text-md font-bold flex items-end gap-1'>
             <a href={props?.project_url} target='_blank'>{props?.title}</a> 
           </div>
