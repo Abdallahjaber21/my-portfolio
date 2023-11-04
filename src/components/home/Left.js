@@ -44,10 +44,18 @@ const Left = () => {
             <a
               href="#experience"
               id="experience-link"
-              className="section_link  text-sm font-semibold rounded-full  transition duration-200 all"
+              className="section_link mb-2  text-sm font-semibold rounded-full  transition duration-200 all"
               onClick={(e) => checkActiveSection(e)}
             >
               EXPERIENCE
+            </a>
+            <a
+              href="#contact"
+              id="contact-link"
+              className="section_link  text-sm font-semibold rounded-full  transition duration-200 all"
+              onClick={(e) => checkActiveSection(e)}
+            >
+              Contact
             </a>
           </div>
 

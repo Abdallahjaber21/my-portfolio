@@ -11,6 +11,7 @@ import pepsi_lebanon_logo from "../../images/projects/pepsi_lebanon/logo.webp";
 import keep_property_logo from "../../images/projects/keep_property/logo.webp";
 import ole_logo from "../../images/projects/ole_nutrients/ole_full.png";
 import tree_treat_logo from "../../images/projects/tree-treat/logo.webp";
+import Contact from "./Contact";
 
 const Right = () => {
   return (
@@ -67,7 +68,7 @@ const Right = () => {
           project_img="/images/projects/pepsi_lebanon/web.webp"
           image_bg="white"
           project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
-          project_skills="magento2,php,mysql,e-commerce"
+          project_skills="magento1,php,mysql,e-commerce"
         />
          <ProjectCard
           title="Best For Lebanon"
@@ -173,7 +174,9 @@ const Right = () => {
           View Full Resume
         </a>
       </section>
-     
+      <section id="contact" className="mt-20 xs:mt-10">
+         <Contact />
+      </section>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
           <div className='title text-md font-bold flex items-end gap-1'>
             <a href={props?.project_url} target='_blank'>{props?.title}</a> 
           </div>
-          <div className='details mt-3 text-sm flex gap-2 xxs:overflow-x-auto'>
+          <div className='details mt-3 text-sm flex gap-2 overflow-x-auto'>
             {/* {props?.project_details} */}
             {screenshots && screenshots?.map((img , index) => (
                      <img key={index} id={index} srcSet={`/images/projects/`+img} alt="Image" className='h-[250px] w-[140px] xxs:w-full' />
