@@ -48,13 +48,47 @@ const Right = () => {
         <ProjectCard
           title="Zmerly Shop"
           project_img={zmerly_img}
+          project_url="https://shop.zmerly.com/"
           image_bg="#f7793c"
           project_details="ZMERLY & CO owes the success largely to our exceptional proximity to our customers when it comes to research and development, engineering, design, quality assurance, production and marketing.  Our development strategy is based on over 28 years of experience, promotion of innovations and a constant search for newer and better solutions. "
           project_skills="magento2,php,mysql,e-commerce"
         />
         <ProjectCard
           title="Ole Nutrients"
+          project_url="https://www.olenutrients.com/"
           project_img={ole_logo}
+          image_bg="white"
+          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+        <ProjectCard
+          title="Pepsi Lebanon e-commerce"
+          project_url="https://pepsilebanon.com/"
+          project_img="/images/projects/pepsi_lebanon/web.webp"
+          image_bg="white"
+          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+         <ProjectCard
+          title="Best For Lebanon"
+          project_url="https://bestfor-lb.com/"
+          project_img="/images/projects/bestforlb/bestfor.webp"
+          image_bg="white"
+          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+         <ProjectCard
+          title="Cedar roots"
+          project_url="https://cedarroots.shop/"
+          project_img="/images/projects/cedarroots/cedarroots.webp"
+          image_bg="white"
+          project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
+          project_skills="magento2,php,mysql,e-commerce"
+        />
+         <ProjectCard
+          title="Zodaya e-commerce"
+          project_url="http://www.zodaya.com/"
+          project_img="/images/projects/zodaya/zodaya.webp"
           image_bg="white"
           project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
           project_skills="magento2,php,mysql,e-commerce"
@@ -87,13 +121,22 @@ const Right = () => {
           project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
           project_screenshot='zakey/home.webp,zakey/categories.webp,zakey/single.webp'
         />
+         <ProjectCard
+          title="Zakey Supplier"
+          image_bg="#009f00"
+          project_img={zakey_customer_logo}
+          project_url="https://zakey.app/"
+          project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
+          project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
+          project_screenshot='zakey/supplier/flash.webp,zakey/supplier/categories.webp,zakey/supplier/add.webp'
+        />
           <ProjectCard
           title="Tree Treat"
           project_img={tree_treat_logo}
           image_bg="white"
           // project_url=""
           project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
-          project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
+          project_skills="framework7,cordova,yii2,php,mysql,mobile"
           project_screenshot='tree-treat/login.webp,tree-treat/home.webp,tree-treat/single.webp'
         />
       </section>
