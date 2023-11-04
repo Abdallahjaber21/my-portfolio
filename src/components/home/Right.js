@@ -42,6 +42,7 @@ const Right = () => {
           title="Almawi Home Appliances"
           project_img={almawi_img}
           image_bg="rgb(59 118 178)"
+          image_scalable_class="scalable_img"
           project_url="https://almawihome.com/beta"
           project_details="Our online portal is a one-stop service solution for all of your appliances, it diagnoses and estimates the repair service fee and the cost upfront. Our goal is to inform the consumers about the possibility of repairing the purchased product and to contribute to greater environmental awareness and sustainable practices."
           project_skills="magento2,php,mysql,e-commerce"
@@ -49,6 +50,7 @@ const Right = () => {
         <ProjectCard
           title="Zmerly Shop"
           project_img={zmerly_img}
+          image_scalable_class="scalable_img"
           project_url="https://shop.zmerly.com/"
           image_bg="#f7793c"
           project_details="ZMERLY & CO owes the success largely to our exceptional proximity to our customers when it comes to research and development, engineering, design, quality assurance, production and marketing.  Our development strategy is based on over 28 years of experience, promotion of innovations and a constant search for newer and better solutions. "
@@ -56,6 +58,7 @@ const Right = () => {
         />
         <ProjectCard
           title="Ole Nutrients"
+          image_scalable_class="scalable_img"
           project_url="https://www.olenutrients.com/"
           project_img={ole_logo}
           image_bg="white"
@@ -64,6 +67,7 @@ const Right = () => {
         />
         <ProjectCard
           title="Pepsi Lebanon e-commerce"
+          image_scalable_class="scalable_img"
           project_url="https://pepsilebanon.com/"
           project_img="/images/projects/pepsi_lebanon/web.webp"
           image_bg="white"
@@ -72,6 +76,7 @@ const Right = () => {
         />
          <ProjectCard
           title="Best For Lebanon"
+          image_scalable_class="scalable_img"
           project_url="https://bestfor-lb.com/"
           project_img="/images/projects/bestforlb/bestfor.webp"
           image_bg="white"
@@ -80,6 +85,7 @@ const Right = () => {
         />
          <ProjectCard
           title="Cedar roots"
+          image_scalable_class="scalable_img"
           project_url="https://cedarroots.shop/"
           project_img="/images/projects/cedarroots/cedarroots.webp"
           image_bg="white"
@@ -88,6 +94,7 @@ const Right = () => {
         />
          <ProjectCard
           title="Zodaya e-commerce"
+          image_scalable_class="scalable_img"
           project_url="http://www.zodaya.com/"
           project_img="/images/projects/zodaya/zodaya.webp"
           image_bg="white"
