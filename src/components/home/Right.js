@@ -15,7 +15,7 @@ import Contact from "./Contact";
 
 const Right = () => {
   return (
-    <div className="right_scrollable_section w-3/5 lg-break:w-full">
+    <div className="right_scrollable_section w-3/5 lg-break:w-full overflow-hidden">
       <section id="about">
         {/* <text className="text-muted text-sm mb-10 h-128">- Introduction</text> */}
         <br />

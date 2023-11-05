@@ -61,7 +61,7 @@ const Contact = () => {
               <div className='mb-6'>
                 <h2 className='text-2xl font-bold'>Contact</h2>
               </div>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate autocomplete="off">
+              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
                 {/* Row 1 of form */}
                 <div className='grid grid-cols-2 gap-4 mb-4 xs:grid-cols-1'>
                   <div className='relative'>

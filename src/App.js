@@ -13,12 +13,21 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(() => {
-    AOS.init({
-      // Global settings (optional)
-      offset: 100, // Offset (in pixels) from the top of the element
-      duration: 1000, // Duration (in ms) for the animation to occur
-      once: true
-    });
+    if (window.innerWidth < 768) {
+      // Mobile settings
+      AOS.init({
+        offset: 300,
+        duration: 1500,
+        once: true
+      });
+    } else {
+      // Desktop settings
+      AOS.init({
+        offset: 100,
+        duration: 1000,
+        once: true
+      });
+    }
   }, []); // The empty dependency array ensures this runs only once
 
   const navigation = [
