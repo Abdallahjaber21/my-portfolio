@@ -7,7 +7,7 @@ const ExperienceCard = (props) => {
     let details = props?.position_details?.split(". ");
 
     return (
-        <div className='experience_card flex 2xl:w-full xl:w-144 lg-break:w-full mb-10 p-2 lg-break:p-0'>
+        <div data-aos="fade-left" className='experience_card flex 2xl:w-full xl:w-144 lg-break:w-full mb-10 p-2 lg-break:p-0'>
             <div className='from_to flex-1 w-10 text-xs text-muted text-capital font-semibold sm:hidden'>{props?.from} - {props?.to}</div>
             <div className='details flex-auto w-64'>
               <div className='title text-md font-bold flex items-end gap-1 xs:text-sm'>

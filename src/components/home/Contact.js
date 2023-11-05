@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
@@ -11,7 +11,12 @@ const Contact = () => {
         formState: { errors }
       } = useForm();
 
+      const [loading , Setloading] = useState(false);
+
       const onSubmit = async (data) => {
+
+        Setloading(true);
+
         const { name, email, subject, message } = data;
         try {
           const templateParams = {
@@ -32,6 +37,7 @@ const Contact = () => {
 
             setTimeout(() => {
                  toast.classList.remove('opacity-0');
+                 Setloading(false);
             }, 100);
 
             setTimeout(() => {
@@ -45,6 +51,7 @@ const Contact = () => {
         } catch (e) {
           console.log(e);
         }
+
       };
 
       return (
@@ -52,7 +59,7 @@ const Contact = () => {
           <div className='container'>
             <div className='bg-primary rounded-lg'>
               <div className='mb-6'>
-                <h2 className='text-2xl font-bold'>Contact Us</h2>
+                <h2 className='text-2xl font-bold'>Contact</h2>
               </div>
               <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate autocomplete="off">
                 {/* Row 1 of form */}
@@ -122,8 +129,13 @@ const Contact = () => {
                   {errors.message && <span className='errorMessage text-xs text-teal font-semibold'>Please enter a message</span>}
                 </div>
                 <div className='text-left'>
-                  <button className='hover:bg-[#122b39] hover:text-teal font-semibold text-white px-4 py-2 rounded transition duration-300'>
-                    Submit
+                  <button className='hover:bg-[#122b39] hover:text-teal font-semibold text-white px-4 py-2 rounded transition duration-300' >
+                     {loading ? (
+                        <div className='flex items-center'>
+                          <svg className="animate-spin h-[10px] w-[10px] mr-3 bg-teal" viewBox="0 0 24 24" />
+                          Processing...
+                        </div>
+                      ) : "Submit"}
                   </button>
                 </div>
               </form>

@@ -109,7 +109,7 @@ const Right = () => {
           project_details="Keep Property is a leading property management company. Our aim is to KEEP select real estates in prime condition by executing effective property management procedures and providing excellent quality workmanship.
              A superior commercial or residential building must be kept highly presentabe if it’s to maintain a first-rate image. This helps to retain a property’s value, ensures its safety, and the well being of its occupants."
           project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-          project_screenshot='keep_property/login.webp,keep_property/home.webp,keep_property/dues.webp'
+          project_screenshot='keep_property/login.webp,keep_property/home.webp,keep_property/dues.webp,keep_property/properties.webp,keep_property/real_estate.webp'
         />
         <ProjectCard
           title="Pepsi Lebanon"

@@ -55,7 +55,7 @@ const Left = () => {
               className="section_link  text-sm font-semibold rounded-full  transition duration-200 all"
               onClick={(e) => checkActiveSection(e)}
             >
-              Contact
+              CONTACT
             </a>
           </div>
 
