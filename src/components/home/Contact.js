@@ -46,7 +46,7 @@ const Contact = () => {
                 setTimeout(() => {
                   toast.classList.add('hidden');
                 }, 100);
-            }, 30000);
+            }, 3000);
           reset();
         } catch (e) {
           console.log(e);
