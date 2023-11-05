@@ -46,7 +46,7 @@ const Contact = () => {
                 setTimeout(() => {
                   toast.classList.add('hidden');
                 }, 100);
-            }, 3000);
+            }, 30000);
           reset();
         } catch (e) {
           console.log(e);
@@ -61,7 +61,7 @@ const Contact = () => {
               <div className='mb-6'>
                 <h2 className='text-2xl font-bold'>Contact</h2>
               </div>
-              <form id='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
+              <form id='contact-form' className='xxs:p-1' onSubmit={handleSubmit(onSubmit)} noValidate autoComplete="off">
                 {/* Row 1 of form */}
                 <div className='grid grid-cols-2 gap-4 mb-4 xs:grid-cols-1'>
                   <div className='relative'>
@@ -141,7 +141,7 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          <div id="toast-top-right" className="hidden opacity-0 fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-green-dark divide-x divide-gray-200 rounded-sm shadow top-5 right-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800 transition-all duration-200" role="alert">
+          <div id="toast-top-right" className="hidden z-[999] opacity-0 fixed flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-green-dark divide-x divide-gray-200 rounded-sm shadow top-5 right-5 dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800 transition-all duration-200" role="alert">
               <div className="text-sm font-normal">Email Was Sent Successfully!</div>
           </div>
         </div>
