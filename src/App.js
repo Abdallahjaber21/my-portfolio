@@ -16,7 +16,7 @@ function App() {
     if (window.innerWidth < 768) {
       // Mobile settings
       AOS.init({
-        offset: 350,
+        offset: 300,
         duration: 1500,
         once: true
       });
