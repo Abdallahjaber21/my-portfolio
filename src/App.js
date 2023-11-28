@@ -16,14 +16,14 @@ function App() {
     if (window.innerWidth < 768) {
       // Mobile settings
       AOS.init({
-        offset: 300,
+        offset: 350,
         duration: 1500,
         once: true
       });
     } else {
       // Desktop settings
       AOS.init({
-        offset: 100,
+        offset: 250,
         duration: 1000,
         once: true
       });
