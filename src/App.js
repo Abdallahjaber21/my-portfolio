@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./css/App.css";
 import Header from "./components/Header";
+import { initFlowbite } from 'flowbite'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
@@ -13,6 +14,9 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(() => {
+
+    initFlowbite();
+
     if (window.innerWidth < 768) {
       // Mobile settings
       AOS.init({

@@ -10,8 +10,12 @@ html{
   overflow-x: hidden !important;
   background-color: $color_primary;
   user-select: none !important;
+
   *
   {
+    --swiper-navigation-size: 25px;
+    --swiper-theme-color: $color_primary;
+    --swiper-scrollbar-drag-bg-color: #feae28;
     &::selection
     {
       background: $color_teal;
@@ -51,5 +55,6 @@ j
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 @import './home';

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ExperienceCard from "../cards/ExperienceCard";
 import CV from "../../assets/my_cv.pdf";
 import ProjectCard from "../cards/ProjectCard";
@@ -13,7 +13,34 @@ import ole_logo from "../../images/projects/ole_nutrients/ole_full.png";
 import tree_treat_logo from "../../images/projects/tree-treat/logo.webp";
 import Contact from "./Contact";
 
+// Flow Bite
+import { Button, Modal, Select, Carousel } from "flowbite-react";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
+
+// Swiper Js
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Zoom,
+  Mousewheel,
+} from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/bundle";
+
 const Right = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [ModalImgs, setModalImgs] = useState([]);
+  const is_mobile = window.innerWidth < 540;
+
+  const handleModalImages = (images) => {
+    setModalImgs(images);
+    setOpenModal(true);
+  };
+
   return (
     <div className="right_scrollable_section w-3/5 lg-break:w-full overflow-hidden">
       <section id="about">
@@ -74,7 +101,7 @@ const Right = () => {
           project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
           project_skills="magento1,php,mysql,e-commerce"
         />
-         <ProjectCard
+        <ProjectCard
           title="Best For Lebanon"
           image_scalable_class="scalable_img"
           project_url="https://bestfor-lb.com/"
@@ -83,7 +110,7 @@ const Right = () => {
           project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
           project_skills="magento2,php,mysql,e-commerce"
         />
-         <ProjectCard
+        <ProjectCard
           title="Cedar roots"
           image_scalable_class="scalable_img"
           project_url="https://cedarroots.shop/"
@@ -92,7 +119,7 @@ const Right = () => {
           project_details="Our journey started back in 2017 with a clear vision towards the love for health, fitness and nature. Our brand is a USDA organic & ISO approved globally. We are passionate about creativity and colors, Ole nutrients full range of superfoods are perfect for daily consumption which are gluten free, vegan friendly and 100% natural."
           project_skills="magento2,php,mysql,e-commerce"
         />
-         <ProjectCard
+        <ProjectCard
           title="Zodaya e-commerce"
           image_scalable_class="scalable_img"
           project_url="http://www.zodaya.com/"
@@ -109,7 +136,8 @@ const Right = () => {
           project_details="Keep Property is a leading property management company. Our aim is to KEEP select real estates in prime condition by executing effective property management procedures and providing excellent quality workmanship.
              A superior commercial or residential building must be kept highly presentabe if it’s to maintain a first-rate image. This helps to retain a property’s value, ensures its safety, and the well being of its occupants."
           project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-          project_screenshot='keep_property/login.webp,keep_property/home.webp,keep_property/dues.webp,keep_property/properties.webp,keep_property/real_estate.webp'
+          project_screenshot="keep_property/login.webp,keep_property/home.webp,keep_property/dues.webp,keep_property/properties.webp,keep_property/real_estate.webp"
+          push_images_func={handleModalImages}
         />
         <ProjectCard
           title="Pepsi Lebanon"
@@ -118,38 +146,93 @@ const Right = () => {
           project_url="https://pepsilebanon.com/"
           project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
           project_skills="framework7,cordova,yii2,php,mysql,magento 1,e-commerce,mobile"
-          project_screenshot='pepsi_lebanon/home.webp,pepsi_lebanon/categories.webp,pepsi_lebanon/subcategories.webp'
+          project_screenshot="pepsi_lebanon/home.webp,pepsi_lebanon/categories.webp,pepsi_lebanon/subcategories.webp,pepsi_lebanon/shop.webp,pepsi_lebanon/profile.png,pepsi_lebanon/orders.webp"
+          push_images_func={handleModalImages}
         />
-         <ProjectCard
+        <ProjectCard
           title="Zakey Customer"
           image_bg="#009f00"
           project_img={zakey_customer_logo}
           project_url="https://zakey.app/"
           project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
           project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-          project_screenshot='zakey/home.webp,zakey/categories.webp,zakey/single.webp'
+          project_screenshot="zakey/home.webp,zakey/categories.webp,zakey/single.webp"
+          push_images_func={handleModalImages}
         />
-         <ProjectCard
+        <ProjectCard
           title="Zakey Supplier"
           image_bg="#009f00"
           project_img={zakey_customer_logo}
           project_url="https://zakey.app/"
           project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
           project_skills="framework7,cordova,yii2,php,mysql,android,ios,firebase"
-          project_screenshot='zakey/supplier/flash.webp,zakey/supplier/categories.webp,zakey/supplier/add.webp'
+          project_screenshot="zakey/supplier/flash.webp,zakey/supplier/categories.webp,zakey/supplier/add.webp"
+          push_images_func={handleModalImages}
         />
-          <ProjectCard
+        <ProjectCard
           title="Tree Treat"
           project_img={tree_treat_logo}
           image_bg="white"
           // project_url=""
           project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
           project_skills="framework7,cordova,yii2,php,mysql,mobile"
-          project_screenshot='tree-treat/login.webp,tree-treat/home.webp,tree-treat/single.webp'
+          project_screenshot="tree-treat/login.webp,tree-treat/home.webp,tree-treat/single.webp,tree-treat/my_trees.webp"
+          push_images_func={handleModalImages}
         />
+        {
+          !is_mobile && (
+            <Modal
+            className="top-0 bottom-0 left-0 right-0 w-3/4 mx-auto my-auto h-3/4 bg-transparent"
+            show={openModal}
+            size="4xl"
+            onClose={() => setOpenModal(false)}
+            position="center"
+            popup
+          >
+            <Modal.Header className=" bg-gray-200 rounded-t-lg" />
+            <Modal.Body className=" bg-gray-200 rounded-b-lg">
+              <Swiper
+                // spaceBetween={50}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                // onSlideChange={() => console.log("slide change")}
+                // onSwiper={(swiper) => console.log(swiper)}
+                modules={[
+                  Navigation,
+                  //  Pagination,
+                  Zoom,
+                  Scrollbar,
+                  Mousewheel,
+                  A11y,
+                ]}
+                scrollbar={{ draggable: true }}
+                zoom={true}
+                mousewheel={true}
+                navigation
+              >
+                {ModalImgs &&
+                  ModalImgs?.map((img, index) => (
+                    <SwiperSlide className="flex-important items-center justify-center">
+                      <div className="swiper-zoom-container">
+                        <img
+                          key={index}
+                          id={index}
+                          loading="lazy"
+                          srcSet={`/images/projects/` + img}
+                          alt="Image"
+                          className="h-[25rem] w-100 object-contain p-[1rem]"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+              </Swiper>
+            </Modal.Body>
+          </Modal>
+          )
+        }
       </section>
       <section id="experience" className="mt-20 xs:mt-10">
-      <div className="font-bold mb-5 pt-2 text-2xl">Experience</div>
+        <div className="font-bold mb-5 pt-2 text-2xl">Experience</div>
         <ExperienceCard
           from="Feb 2022"
           to="present"
@@ -182,7 +265,7 @@ const Right = () => {
         </a>
       </section>
       <section id="contact" className="mt-20 xs:mt-10">
-         <Contact />
+        <Contact />
       </section>
     </div>
   );
