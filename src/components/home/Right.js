@@ -4,6 +4,7 @@ import CV from "../../assets/my_cv.pdf";
 import ProjectCard from "../cards/ProjectCard";
 
 // IMAGES
+import saxon_img from "../../images/projects/saxon/logo.png";
 import almawi_img from "../../images/projects/almawi/almawi.png";
 import zmerly_img from "../../images/projects/zmerly/zmerly.png";
 import zakey_customer_logo from "../../images/projects/zakey/customer/logo.webp";
@@ -15,7 +16,6 @@ import Contact from "./Contact";
 
 // Flow Bite
 import { Button, Modal, Select, Carousel } from "flowbite-react";
-import { HiOutlineExclamationCircle } from "react-icons/hi";
 
 // Swiper Js
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,9 +27,11 @@ import {
   Zoom,
   Mousewheel,
 } from "swiper/modules";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/bundle";
+import ProjectWebsiteCard from "../cards/ProjectWebsiteCard";
 
 const Right = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -47,7 +49,7 @@ const Right = () => {
         {/* <text className="text-muted text-sm mb-10 h-128">- Introduction</text> */}
         <br />
         <div className="text-lg">
-          <span>Mid-Senior</span>
+          <span>Senior</span>
           <br />
           <span>Full-Stack Developer</span>
         </div>
@@ -65,6 +67,17 @@ const Right = () => {
       </section>
       <section id="projects" className="mt-20 xs:mt-10">
         <div className="font-bold mb-5 pt-2 text-2xl">Projects</div>
+        <ProjectWebsiteCard
+          title="Saxon POS"
+          project_img={saxon_img}
+          image_bg="white"
+          project_url="#"
+          // project_details="Zakey’s mission is to encourage vendors in Qatar and the MENA region to offer their near expiry products, overstock, aging stock and surplus at a lower price enabling families and individuals to benefit from them instead of feeding landfills! At Zakey we are working on bringing people together from the hospitality industry, retail and food services sectors as well as pharmacies, and beauty industry with the support of governmental institutions and consumers to take an active step towards zero waste."
+           project_skills="php,yii2,mysql"
+          project_screenshot="saxon/saxon.png,saxon/saxon-pos.png,saxon/products.png,saxon/barcodes.png"
+          push_images_func={handleModalImages}
+        />
+
         <ProjectCard
           title="Almawi Home Appliances"
           project_img={almawi_img}
@@ -179,9 +192,8 @@ const Right = () => {
           project_screenshot="tree-treat/login.webp,tree-treat/home.webp,tree-treat/single.webp,tree-treat/my_trees.webp"
           push_images_func={handleModalImages}
         />
-        {
-          !is_mobile && (
-            <Modal
+        {!is_mobile && (
+          <Modal
             className="top-0 bottom-0 left-0 right-0 w-3/4 mx-auto my-auto h-3/4 bg-transparent"
             show={openModal}
             size="4xl"
@@ -228,8 +240,7 @@ const Right = () => {
               </Swiper>
             </Modal.Body>
           </Modal>
-          )
-        }
+        )}
       </section>
       <section id="experience" className="mt-20 xs:mt-10">
         <div className="font-bold mb-5 pt-2 text-2xl">Experience</div>
