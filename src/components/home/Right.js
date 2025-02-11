@@ -12,16 +12,16 @@ import pepsi_lebanon_logo from "../../images/projects/pepsi_lebanon/logo.webp";
 import keep_property_logo from "../../images/projects/keep_property/logo.webp";
 import ole_logo from "../../images/projects/ole_nutrients/ole_full.png";
 import tree_treat_logo from "../../images/projects/tree-treat/logo.webp";
+import samar_logo from "../../images/projects/samar/logo.png";
 import Contact from "./Contact";
 
 // Flow Bite
-import { Button, Modal, Select, Carousel } from "flowbite-react";
+import { Modal } from "flowbite-react";
 
 // Swiper Js
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
-  Pagination,
   Scrollbar,
   A11y,
   Zoom,
@@ -55,18 +55,29 @@ const Right = () => {
         </div>
 
         <div className="summary text-lg xl:text-base xs:text-xs text-muted mt-2 ">
-          Experienced Full-Stack Developer with a strong background in
-          designing, developing, and maintaining web applications using a
-          diverse range of programming languages and frameworks. Proficient in
-          optimizing database schemas, ensuring cross-platform responsiveness,
-          and integrating mobile technologies to enhance user experiences. Adept
-          at utilizing version control systems and debugging tools to deliver
-          high-quality solutions. Committed to continuous learning and growth in
-          the ever-evolving tech landscape.
+          <ul className="list-disc list-inside">
+            <li className="text-sm">Highly skilled Full-Stack Developer with over 5. years of experience</li>
+            <li className="text-sm">Bachelor's degree in Computer Science</li>
+            <li className="text-sm">Major focus on PHP frameworks such as Yii2, Laravel and Next.js with TypeScript</li>
+            <li className="text-sm">Strong emphasis on SOLID principles, design patterns, AWS cloud infrastructure</li>
+            <li className="text-sm">Optimizing database schemas, implementing caching mechanisms</li>
+            <li className="text-sm">Proficient in version control systems such as Git, Bitbucket and advanced debugging techniques</li>
+          </ul>
         </div>
       </section>
       <section id="projects" className="mt-20 xs:mt-10">
         <div className="font-bold mb-5 pt-2 text-2xl">Projects</div>
+        <ProjectCard
+          title="Samar"
+          project_img={samar_logo}
+          image_bg="#0f2474"
+          orientation="landscape"
+          // project_url=""
+          project_details="The company has known considerable success and has grown significantly in over 60 years of operation. In 2001, SMLC made a strategic alliance with PepsiCo which enlarged the shareholders’ base of SMLC, with the majority of the SMLC shares remaining with the Assaf family. Since 2001, a number of brands were gradually added to SMLC’s portfolio, these include: Tropicana, Mr.Juicy, Lipton Ice Tea, Gatorade, AMP, H2Oh! , and Aquafina mineral water."
+          project_skills="flutter,dart,firebase,android,ios,sqlite"
+          project_screenshot="samar/login.png,samar/home.png,samar/shop.png,samar/game.png,samar/questions.png,samar/winner.png,samar/profile.png"
+          push_images_func={handleModalImages}
+        />
         <ProjectWebsiteCard
           title="Saxon POS"
           project_img={saxon_img}
@@ -245,12 +256,30 @@ const Right = () => {
       <section id="experience" className="mt-20 xs:mt-10">
         <div className="font-bold mb-5 pt-2 text-2xl">Experience</div>
         <ExperienceCard
+          from="Dec 2024"
+          to="Present"
+          title="Full Stack Developer . iSolution | Riyadh, Saudi Arabia"
+          company_url="https://endspacemena.com"
+          position="Google cloud | google maps partner"
+          position_details="To be defined later on"
+          position_skills="Ai chatbots, flutter, dart, Laravel, Docker, wsl2"
+        />
+        <ExperienceCard
+          from="Jan 2024"
+          to="Dec 2024"
+          title="Senior Back End Developer . Endspace Mena | Beirut, Dbayeh"
+          company_url="https://endspacemena.com"
+          position="Senior Back End Developer"
+          position_details="Led and enhanced the performance of GraySync system by optimizing MySQL queries, implementing caching, and reducing unnecessary joins. Strengthened the security by identifying and resolving critical vulnerabilities. Refactored and streamlined the codebase for improved efficiency and maintainability. Modernized the frontend by transitioning to Next.js, Next Auth with TypeScript, Tailwind CSS. Used Zustand as a state management while preserving the Yii2 PHP framework for backend and APIs"
+          position_skills="yii2,mysql,next js, tailwind css, typescript, zustand"
+        />
+        <ExperienceCard
           from="Feb 2022"
           to="present"
           title="Full-Stack Developer . Codendot | Tripoli, Al Mina"
           company_url="https://www.codendot.com"
           position="Mid Senior Full-Stack Developer"
-          position_details="Developed and maintained front-end/back-end web applications using a variety of languages and frameworks, including HTML, JavaScript, PHP, YII2, Magento and jQuery. Utilized MySQL, Firebase databases for efficient data storage, retrieval, and schema optimization for performance and scalability. Ensured cross-platform optimization and mobile responsiveness using CSS, SCSS, LESS, Bootstrap5, and Tailwind CSS for styling. Integrated mobile technologies such as React Native, Android Studio, Flutter, Cordova, Expo, and Framework7 to enhance mobile experiences. Employed version control systems like GitHub and GitLab for efficient collaboration and version management. Monitored and troubleshooted performance issues, utilizing debugging tools, advanced code logic, and tracking network requests. Integrated comprehensive work order management, role-based permissions, and team management functionalities based on project requirements to ensure efficient workflows"
+          position_details="Specialised in implementing Automated facility management solutions such as E-maintain (Pepsi Lebanon), Fibrex using the Yii2 PHP Framework, MySQL including Cron Jobs, AI integrations, Complex queries, Dashboard Analytics. Built Ecommerce websites such as ALMawi, Zmerly, CedarRoots, Ole Nutrients, BestFor LB… using the Magento PHP Framework. Developed Mobile applications such as Tree Treat, Keep Property, Pepsi Lebanon, Pepsi B2B, Zakey Customer, Zakey Supplier… using Cordova, Framework7, React Native, Expo, Firebase push notifications. Deployed backend systems on cPanel, published mobile apps on Google Play and App Store."
           position_skills="yii2,framwork7,cordova,mysql,magento,wordpress"
         />
         <ExperienceCard
@@ -258,16 +287,8 @@ const Right = () => {
           to="june 2022"
           title="Full-stack Developer . Freelance | Lebanon"
           position="Full-stack Developer"
-          position_details="Wrote well-designed, testable, and efficient code using web development best practices. Created basic website layouts and user interfaces, integrating data from various back- end web services and databases. Integrated data from various back-end web services and databases, ensuring cross- browser compatibility of new features. Created and maintained software documentation, ensuring clear and up-to-date records. Collaborated with web designers to realize visual design intent and ensured responsive design across devices. Advocated for automation, Test Driven Development (TDD), Continuous Integration (CI), and Continuous Delivery (CD) to enhance product quality and detect bugs at an early stage"
-          position_skills="reactjs,angular,shopify,firebase,react native,flutter,vue js,mongo db,liquid,dart"
-        />
-        <ExperienceCard
-          from="Jan 2020"
-          to="June 2021"
-          title="Project Coordinator . Lamar Jewelry | Tripoli, Koura"
-          position="Project Coordinator"
-          position_details="Coordinated the implementation and customization of the Odoo point-of-sale system. Utilized Odoo functionalities to handle customer service, inquiries, and sales transactions. Conducted inventory management, meticulously organizing products based on item codes within the Odoo system. Leveraged Odoo's capabilities to provide clients with comprehensive product information, optimizing the overall customer experience. Collaborated closely with the development team to enhance the Odoo point-of-sale module for more efficient sales operations, thereby contributing to the successful achievement of sales targets."
-          position_skills="odoo,management"
+          position_details="Established a POS system for Saxon, including database architecture, stock management, CRUD for customers, employee management, transactions, sales, barcode integration, receipt printing, and various reports like daily cashier and sales reports. Developed an AI chatbot that prompts users to upload a PDF and then answers diverse questions about its content. This solution integrates the Yii2 PHP framework with Python's NLTK for NLP, using tokenization, Flask, pipeline automation, Auto Tokenizer, and AutoModelForQuestionAnswering to ensure accurate and relevant responses. Built personal applications using Flutter, Angular, Vue js, React, React native, Redux, Firebase, Nodejs, Express, MongoDB, and many more technologies."
+          position_skills="Next js,Firebase,React native,Flutter,Vue js,Mongo db,Dart"
         />
       </section>
       <section id="resume" className="mt-20 xs:mt-10">

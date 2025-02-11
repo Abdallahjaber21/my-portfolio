@@ -18,7 +18,8 @@ const ProjectCard = (props) => {
           <div className='details mt-3 text-sm flex gap-2 overflow-x-auto'>
             {/* {props?.project_details} */}
             {screenshots && screenshots?.map((img , index) => (
-                     <img key={index} id={index} loading="lazy" srcSet={`/images/projects/`+img} alt="Image" className='h-[250px] w-[140px] xxs:w-full' onClick={() => props?.push_images_func(screenshots)} />
+                     <img key={index} id={index} loading="lazy" srcSet={`/images/projects/`+img} alt="Image" className={`${props?.orientation === 'landscape' ? 'w-full h-full' : 'w-[140px] h-[250px] xxs:w-full'}`}
+                     onClick={() => props?.push_images_func(screenshots)} />
             ))}
           </div>
           <div className='skills mt-4 flex gap-2 flex-wrap'>

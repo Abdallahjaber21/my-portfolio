@@ -17,12 +17,12 @@ const ProjectWebsiteCard = (props) => {
           </div>
           <div className='details mt-3 text-sm flex gap-2 overflow-x-auto'>
             {/* {props?.project_details} */}
-            {screenshots && screenshots?.map((img , index) => (
-                     <img key={index} id={index} loading="lazy" srcSet={`/images/projects/`+img} alt="Image" className='h-[250px] max-w-[350px] xxs:w-full' onClick={() => props?.push_images_func(screenshots)} />
+            {screenshots?.map((img , index) => (
+                <img key={index} id={index} loading="lazy" srcSet={`/images/projects/`+img} alt="Image" className='h-[250px] xxs:w-full' onClick={() => props?.push_images_func(screenshots)} />
             ))}
           </div>
           <div className='skills mt-4 flex gap-2 flex-wrap'>
-                {skills && skills?.map((skill , index) => (
+                {skills?.map((skill , index) => (
                     <div key={index} id={index} className='skill_tag rounded-full bg-teal-400/10 px-3 py-1 text-sm font-medium leading-5'>{skill}</div>
                  ))}
           </div>
