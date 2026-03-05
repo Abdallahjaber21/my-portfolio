@@ -1,9 +1,7 @@
 import React from 'react';
 
-import SubHeader from '../components/home/SubHeader';
 import Left from '../components/home/Left';
 import Right from '../components/home/Right';
-import Contact from '../components/home/Contact';
 
 const Home = () => {
     return (

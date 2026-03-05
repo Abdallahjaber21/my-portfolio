@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import ThemeToggle from "../ThemeToggle";
-import { useTheme } from "../../context/ThemeContext";
 
 const SECTIONS = ["about", "projects", "experience", "contact"] as const;
 
 const Left: React.FC = () => {
-    const { theme } = useTheme();
     const [activeSection, setActiveSection] = useState<string>("about");
 
     useEffect(() => {

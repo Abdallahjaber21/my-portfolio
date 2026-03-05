@@ -1,6 +1,4 @@
-import logo from "./logo.svg";
 import "./css/App.css";
-import Header from "./components/Header";
 import { initFlowbite } from 'flowbite'
 import { ThemeProvider } from './context/ThemeContext';
 
@@ -34,17 +32,6 @@ function App() {
       });
     }
   }, []); // The empty dependency array ensures this runs only once
-
-  const navigation = [
-    {
-      label: "Home",
-      path: "/",
-    },
-    {
-      label: "Page Two",
-      path: "/pagetwo",
-    },
-  ];
 
   return (
     <ThemeProvider>
