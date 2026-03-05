@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./css/App.css";
 import Header from "./components/Header";
 import { initFlowbite } from 'flowbite'
+import { ThemeProvider } from './context/ThemeContext';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AOS from 'aos';
@@ -46,12 +47,14 @@ function App() {
   ];
 
   return (
-    <BrowserRouter>
-      {/* <Header /> */}
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        {/* <Header /> */}
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

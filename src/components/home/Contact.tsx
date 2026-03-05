@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
     return (
         <div className='ContactForm'>
             <div className='container'>
-                <div className='bg-primary rounded-lg'>
+                <div className='rounded-lg' style={{ backgroundColor: 'var(--bg-primary)' }}>
                     <div className='mb-6'>
                         <h2 className='text-2xl font-bold'>Contact</h2>
                     </div>
@@ -74,7 +74,8 @@ const Contact: React.FC = () => {
                                             message: 'Please use 30 characters or less'
                                         }
                                     })}
-                                    className='w-full text-white px-3 py-2  rounded transition bg-[#122b39] duration-300 focus:outline-none focus:border-white focus:ring-1 focus:ring-teal font-semibold'
+                                    className='w-full px-3 py-2 rounded transition duration-300 focus:outline-none focus:ring-1 focus:ring-teal font-semibold'
+                                    style={{ backgroundColor: 'var(--tag-bg)', color: 'var(--text-primary)' }}
                                     placeholder='Name'
                                 />
                                 {errors.name && <span className='errorMessage text-xs text-teal font-semibold'>{errors.name.message as string}</span>}
@@ -86,7 +87,8 @@ const Contact: React.FC = () => {
                                         required: true,
                                         pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zAZ0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
                                     })}
-                                    className='w-full text-white px-3 py-2  rounded transition bg-[#122b39] duration-300 focus:outline-none focus:border-white focus:ring-1 focus:ring-teal font-semibold'
+                                    className='w-full px-3 py-2 rounded transition duration-300 focus:outline-none focus:ring-1 focus:ring-teal font-semibold'
+                                    style={{ backgroundColor: 'var(--tag-bg)', color: 'var(--text-primary)' }}
                                     placeholder='Email address'
                                 />
                                 {errors.email && (
@@ -105,7 +107,8 @@ const Contact: React.FC = () => {
                                         message: 'Subject cannot exceed 75 characters'
                                     }
                                 })}
-                                className='w-full text-white px-3 py-2  rounded transition bg-[#122b39] duration-300 focus:outline-none focus:border-white focus:ring-1 focus:ring-teal font-semibold'
+                                className='w-full px-3 py-2 rounded transition duration-300 focus:outline-none focus:ring-1 focus:ring-teal font-semibold'
+                                style={{ backgroundColor: 'var(--tag-bg)', color: 'var(--text-primary)' }}
                                 placeholder='Subject'
                             />
                             {errors.subject && (
@@ -119,13 +122,17 @@ const Contact: React.FC = () => {
                                 {...register('message', {
                                     required: true
                                 })}
-                                className='w-full px-3 text-white py-2  rounded transition bg-[#122b39] duration-300 focus:outline-none focus:border-white focus:ring-1 focus:ring-teal font-semibold'
+                                className='w-full px-3 py-2 rounded transition duration-300 focus:outline-none focus:ring-1 focus:ring-teal font-semibold'
+                                style={{ backgroundColor: 'var(--tag-bg)', color: 'var(--text-primary)' }}
                                 placeholder='Message'
                             />
                             {errors.message && <span className='errorMessage text-xs text-teal font-semibold'>Please enter a message</span>}
                         </div>
                         <div className='text-left'>
-                            <button className='hover:bg-[#122b39] hover:text-teal font-semibold text-white px-4 py-2 rounded transition duration-300' >
+                            <button className='font-semibold px-4 py-2 rounded transition duration-300 hover:text-teal'
+                                style={{ color: 'var(--text-primary)', borderColor: 'var(--accent-teal)' }}
+                                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--tag-bg)')}
+                                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')} >
                                 {loading ? (
                                     <div className='flex items-center'>
                                         <svg className="animate-spin h-[10px] w-[10px] mr-3 bg-teal" viewBox="0 0 24 24" />

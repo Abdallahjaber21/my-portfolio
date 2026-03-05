@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.author-name {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.section_link {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.08em;
+}
+
 .dash-after::after {
   content: "";
   width: 60px;
   height: 5px;
-  background-color: #feae28;
+  background-color: var(--dash-color);
   display: block;
   margin-top: 0.5rem;
 }
@@ -39,8 +50,8 @@
   transition: all 200ms;
 }
 .experience_card .skill_tag, .project_card .skill_tag {
-  color: #2dd4bf;
-  background-color: #122b39;
+  color: var(--tag-text);
+  background-color: var(--tag-bg);
 }
 .experience_card .title, .project_card .title {
   transition: all 200ms;
@@ -50,22 +61,26 @@
   width: 18px;
   height: 18px;
   display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
   transition: all 200ms;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white' class='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  background-color: var(--text-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  mask-size: cover;
+  mask-repeat: no-repeat;
 }
 .experience_card:hover, .project_card:hover {
-  box-shadow: 0px 0px 5px #36425ad1;
-  background-color: #162032;
+  box-shadow: 0px 0px 5px var(--bg-card-shadow);
+  background-color: var(--bg-card-hover);
   cursor: pointer;
 }
 .experience_card:hover .title, .project_card:hover .title {
-  color: #2dd4bf;
+  color: var(--accent-teal);
 }
 .experience_card:hover .title::after, .project_card:hover .title::after {
   transform: translateX(1px) translateY(-3px);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%232dd4bf' class='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  background-color: var(--accent-teal);
 }
 
 .flex-important {
@@ -78,7 +93,7 @@
   align-items: center;
 }
 .header_link.active {
-  color: #feae28;
+  color: var(--accent-yellow);
 }
 .header_link.active::after {
   content: "";
@@ -86,7 +101,7 @@
   width: 5px;
   height: 5px;
   display: block;
-  background-color: #feae28;
+  background-color: var(--accent-yellow);
   border-radius: 100vmax;
   position: relative;
   top: 5px;
@@ -95,8 +110,9 @@
 html {
   scroll-behavior: smooth !important;
   overflow-x: hidden !important;
-  background-color: #0f172a;
+  background-color: var(--bg-primary);
   user-select: none !important;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 html * {
   --swiper-navigation-size: 25px;
@@ -104,7 +120,7 @@ html * {
   --swiper-scrollbar-drag-bg-color: #feae28;
 }
 html *::selection {
-  background: #2dd4bf;
+  background: var(--selection-bg);
 }
 html j body {
   font-family: "Lato", sans-serif;
@@ -151,7 +167,7 @@ html j body {
   content: "";
   width: 0px;
   height: 2px;
-  background-color: #feae28;
+  background-color: var(--section-link-dash);
   margin-right: 0.5rem;
   transition: width 200ms;
 }
@@ -169,20 +185,24 @@ html j body {
   width: 0;
   height: 1px;
   bottom: 0;
-  background-color: #2dd4bf;
+  background-color: var(--resume-underline);
   transition: all 200ms;
 }
 .Home_page_layout .content .right_scrollable_section #resume a::after {
   content: "";
   position: absolute;
   right: -22px;
-  background-repeat: no-repeat;
   width: 18px;
   height: 18px;
   transition: all 200ms;
-  background-size: contain;
   display: block;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white' class='ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+  background-color: var(--text-primary);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
 }
 .Home_page_layout .content .right_scrollable_section #resume a:hover::before {
   width: 100%;

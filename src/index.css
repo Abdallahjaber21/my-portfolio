@@ -2,6 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========================================
+   THEME CSS VARIABLES
+   ======================================== */
+
+/* Dark theme (default) — preserves current design exactly */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #262333;
+  --bg-card-hover: #162032;
+  --bg-card-shadow: #36425ad1;
+  --bg-mobile-nav: #0f172a;
+  --text-primary: #ffffff;
+  --text-muted-opacity: 0.6;
+  --accent-teal: #2dd4bf;
+  --accent-yellow: #feae28;
+  --tag-bg: #2d87bb2d;
+  --tag-text: #3fb7fd;
+  --selection-bg: #2dd4bf;
+  --link-arrow-fill: white;
+  --dash-color: #feae28;
+  --section-link-dash: #feae28;
+  --resume-underline: #3fb7fd;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #F0EDE8;
+  --bg-card-hover: #EDE9E3;
+  --bg-card-shadow: #c8bfb31a;
+  --bg-mobile-nav: #FAF9F6;
+  --text-primary: #1a1a2e;
+  --text-muted-opacity: 0.5;
+  --accent-teal: #1f2525;
+  --accent-yellow: #b8860b;
+  --tag-bg: #ffce742a;
+  --tag-text: #caa221;
+  --selection-bg: #10665c;
+  --link-arrow-fill: %231a1a2e;
+  --dash-color: #caa221;
+  --section-link-dash: #caa221;
+  --resume-underline: #10665c;
+}
+
+/* ========================================
+   THEME TOGGLE COMPONENT
+   ======================================== */
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-track {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  border-radius: 100vmax;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.toggle-track.dark {
+  background-color: #334155;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-track.light {
+  background-color: #d4c5a0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.toggle-thumb {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s ease, box-shadow 0.35s ease;
+  top: 3px;
+  left: 3px;
+  z-index: 2;
+}
+
+.toggle-track.dark .toggle-thumb {
+  background-color: #818cf8;
+  transform: translateX(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-track.light .toggle-thumb {
+  background-color: #fbbf24;
+  transform: translateX(24px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  padding: 0 2px;
+}
+
+.toggle-icon {
+  width: 14px;
+  height: 14px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.toggle-track.dark .toggle-icon.sun {
+  color: #94a3b8;
+  opacity: 0.5;
+}
+
+.toggle-track.dark .toggle-icon.moon {
+  color: #e0e7ff;
+  opacity: 1;
+}
+
+.toggle-track.light .toggle-icon.sun {
+  color: #fef3c7;
+  opacity: 1;
+}
+
+.toggle-track.light .toggle-icon.moon {
+  color: #64748b;
+  opacity: 0.5;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
