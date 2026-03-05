@@ -155,3 +155,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Contact form inputs */
+.contact-input:focus {
+  border-color: var(--accent-teal) !important;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-teal) 25%, transparent);
+}
+
+.contact-input:hover:not(:focus) {
+  border-color: color-mix(in srgb, var(--text-primary) 30%, transparent) !important;
+}
