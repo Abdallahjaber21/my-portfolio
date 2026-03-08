@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectCardProps } from '../../types/ProjectCard';
+import { ProjectCardProps } from '@/types/ProjectCard';
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 

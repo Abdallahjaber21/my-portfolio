@@ -10,6 +10,10 @@ import 'aos/dist/aos.css';
 import Home from "./pages/Home";
 import { useEffect } from "react";
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
+
 function App(): React.JSX.Element {
 
     useEffect(() => {
@@ -34,14 +38,16 @@ function App(): React.JSX.Element {
     }, []); // The empty dependency array ensures this runs only once
 
     return (
-        <ThemeProvider>
-            <BrowserRouter>
-                {/* <Header /> */}
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                </Routes>
-            </BrowserRouter>
-        </ThemeProvider>
+        <QueryClientProvider client={queryClient}>
+            <ThemeProvider>
+                <BrowserRouter>
+                    {/* <Header /> */}
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+                </BrowserRouter>
+            </ThemeProvider>
+        </QueryClientProvider>
     );
 }
 

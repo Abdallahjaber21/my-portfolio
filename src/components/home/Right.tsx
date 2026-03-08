@@ -1,18 +1,20 @@
 import { useState } from "react";
-import ExperienceCard from "../cards/ExperienceCard";
-import CV from "../../assets/my_cv.pdf";
-import ProjectCard from "../cards/ProjectCard";
+import { useSection } from "@/hooks/useSections";
+import { parseSectionContent } from "@/lib/sectionParser";
+import ExperienceCard from "@/components/cards/ExperienceCard";
+import CV from "@/assets/my_cv.pdf";
+import ProjectCard from "@/components/cards/ProjectCard";
 
 // IMAGES
-import saxon_img from "../../images/projects/saxon/logo.png";
-import almawi_img from "../../images/projects/almawi/almawi.png";
-import zmerly_img from "../../images/projects/zmerly/zmerly.png";
-import zakey_customer_logo from "../../images/projects/zakey/customer/logo.webp";
-import pepsi_lebanon_logo from "../../images/projects/pepsi_lebanon/logo.webp";
-import keep_property_logo from "../../images/projects/keep_property/logo.webp";
-import ole_logo from "../../images/projects/ole_nutrients/ole_full.png";
-import tree_treat_logo from "../../images/projects/tree-treat/logo.webp";
-import samar_logo from "../../images/projects/samar/logo.png";
+import saxon_img from "@/images/projects/saxon/logo.png";
+import almawi_img from "@/images/projects/almawi/almawi.png";
+import zmerly_img from "@/images/projects/zmerly/zmerly.png";
+import zakey_customer_logo from "@/images/projects/zakey/customer/logo.webp";
+import pepsi_lebanon_logo from "@/images/projects/pepsi_lebanon/logo.webp";
+import keep_property_logo from "@/images/projects/keep_property/logo.webp";
+import ole_logo from "@/images/projects/ole_nutrients/ole_full.png";
+import tree_treat_logo from "@/images/projects/tree-treat/logo.webp";
+import samar_logo from "@/images/projects/samar/logo.png";
 import Contact from "./Contact";
 
 // Flow Bite
@@ -31,12 +33,14 @@ import {
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/bundle";
-import ProjectWebsiteCard from "../cards/ProjectWebsiteCard";
+import ProjectWebsiteCard from "@/components/cards/ProjectWebsiteCard";
 
 const Right: React.FC = () => {
     const [openModal, setOpenModal] = useState(false);
     const [ModalImgs, setModalImgs] = useState<string[]>([]);
     const is_mobile = window.innerWidth < 540;
+
+    const { data: introSection, isLoading: isLoadingIntro } = useSection('introduction-section-3');
 
     const handleModalImages = (images: string[]) => {
         setModalImgs(images);
@@ -46,25 +50,19 @@ const Right: React.FC = () => {
     return (
         <div className="right_scrollable_section w-3/5 lg-break:w-full overflow-hidden">
             <section id="about">
-                {/* <text className="text-muted text-sm mb-10 h-128">- Introduction</text> */}
-                <br />
-                <div className="text-xl">
-                    <span>Staff Software Engineer</span>
-                </div>
-
-                <div className="summary text-lg xl:text-base xs:text-xs text-muted mt-2">
-                    <p>Platform-focused Software Engineer with 7+ years of experience building scalable, production-grade systems.</p>
-                    <br />
-                    <ul className="list-disc list-inside">
-                        <li className="text-sm">Expertise in Laravel, Yii2, and Next.js (TypeScript) for backend and headless architectures.</li>
-                        <li className="text-sm">Bachelor's degree in Computer Science.</li>
-                        <li className="text-sm">Strong background in cloud infrastructure across AWS, GCP, and Azure.</li>
-                        <li className="text-sm">Deep focus on clean architecture, SOLID principles, and proven design patterns.</li>
-                        <li className="text-sm">Experienced in performance optimization, including database tuning and caching strategies.</li>
-                        <li className="text-sm">Skilled in designing reliable, scalable systems for real-world production environments.</li>
-                        <li className="text-sm">Passionate about building platforms and developer tooling that scale teams, not just codebases.</li>
-                    </ul>
-                </div>
+                {isLoadingIntro ? (
+                    <div className="text-muted">Loading...</div>
+                ) : introSection ? (
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: parseSectionContent(introSection.content),
+                        }}
+                    />
+                ) : (
+                    <div>
+                        no data
+                    </div>
+                )}
             </section>
             <section id="projects" className="mt-20 xs:mt-10">
                 <div className="font-bold mb-5 pt-2 text-2xl">Projects</div>

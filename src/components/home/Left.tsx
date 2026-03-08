@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
-import ThemeToggle from "../ThemeToggle";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const SECTIONS = ["about", "projects", "experience", "contact"] as const;
 

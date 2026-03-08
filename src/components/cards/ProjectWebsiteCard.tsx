@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectWebsiteCardProps } from '../../types/ProjectWebsiteCard';
+import { ProjectWebsiteCardProps } from '@/types/ProjectWebsiteCard';
 
 const ProjectWebsiteCard: React.FC<ProjectWebsiteCardProps> = (props) => {
 

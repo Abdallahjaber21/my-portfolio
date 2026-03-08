@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExperienceCardProps } from '../../types/ExperienceCard';
+import { ExperienceCardProps } from '@/types/ExperienceCard';
 
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
 
