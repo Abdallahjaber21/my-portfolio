@@ -3,8 +3,8 @@ import { ProjectCardProps } from '@/types/ProjectCard';
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
 
-    const skills = props?.project_skills?.split(",");
-    const screenshots = props?.project_screenshot?.split(",");
+    const skills = Array.isArray(props?.project_skills) ? props.project_skills : props?.project_skills?.split(",");
+    const screenshots = Array.isArray(props?.project_screenshot) ? props.project_screenshot : props?.project_screenshot?.split(",");
 
     return (
 
@@ -19,8 +19,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
                 <div className='details mt-3 text-sm flex gap-2 overflow-x-auto'>
                     {/* {props?.project_details} */}
                     {screenshots?.map((img, index) => (
-                        <img key={index} loading="lazy" srcSet={`/images/projects/` + img} alt="Screenshot" className={`${props?.orientation === 'landscape' ? 'w-full h-full' : 'w-[140px] h-[250px] xxs:w-full'}`}
-                            onClick={() => props?.push_images_func?.(screenshots)} />
+                        <img key={index} loading="lazy" srcSet={img.startsWith('http') ? img : `/images/projects/` + img} alt="Screenshot" className={`${props?.orientation === 'landscape' ? 'w-full h-full' : 'w-[140px] h-[250px] xxs:w-full'}`} />
                     ))}
                 </div>
                 <div className='skills mt-4 flex gap-2 flex-wrap'>

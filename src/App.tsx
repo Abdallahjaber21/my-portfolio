@@ -1,5 +1,4 @@
 import "./css/App.css";
-import { initFlowbite } from 'flowbite'
 import { ThemeProvider } from './context/ThemeContext';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,8 +16,6 @@ const queryClient = new QueryClient();
 function App(): React.JSX.Element {
 
     useEffect(() => {
-
-        initFlowbite();
 
         if (window.innerWidth < 768) {
             // Mobile settings

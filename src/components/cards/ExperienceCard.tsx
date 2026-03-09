@@ -3,7 +3,7 @@ import { ExperienceCardProps } from '@/types/ExperienceCard';
 
 const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
 
-    const skills = props?.position_skills?.split(",");
+    const skills = Array.isArray(props?.position_skills) ? props.position_skills : props?.position_skills?.split(",");
 
     return (
         <div data-aos="fade-left" className='experience_card flex 2xl:w-full xl:w-144 lg-break:w-full mb-10 p-2 lg-break:p-0'>
@@ -17,7 +17,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = (props) => {
                     <div className='hidden sm:block'>{props?.from} - {props?.to}</div>
                 </div>
                 <div className='details mt-3 text-muted text-sm'>
-                    {props?.position_details}
+                    {typeof props?.position_details === 'string' ? (
+                        <div dangerouslySetInnerHTML={{ __html: props.position_details }} />
+                    ) : (
+                        props?.position_details
+                    )}
                 </div>
                 <div className='skills mt-4 flex gap-2 flex-wrap'>
                     {skills?.map((skill, index) => (
