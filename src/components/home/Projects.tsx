@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
                     project_img: data.project_cover_image,
                     project_url: data.project_url,
                     project_skills: data.project_skills_tags,
-                    project_screenshot: data.project_gallery?.map((g: any) => Object.values(g)[0]),
+                    project_screenshot: data.project_gallery?.map((g: any) => typeof g === 'string' ? g : Object.values(g)[0]),
                     project_details: data.project_details || data.project_description || "",
                     image_bg: data.image_bg || "transparent", // Provide a default if undefined in backend
                     orientation: data.orientation || "landscape", // assuming landscape by default
